@@ -38,11 +38,10 @@ Task Breakdown:
 
 Plan the trip
 Location
-# stops
+Number of stops
 Dates
 Concert/Music Event type
 Results concerts
 Pick concerts
 Link to ticket purchase
 Save/Send Tour Itinerary 
-
