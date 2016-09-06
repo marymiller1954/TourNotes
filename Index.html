@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Train Times</title>
-  <!-- Reset style sheet -->
+<!--  <meta http-equiv="Refresh" content="60"> -->
+
+  <title>TourNotes</title>
+  <!--Reset style sheet  -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
   <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<!--TESTing testing-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/TourNotes.css">
   <!-- Custom CSS Bootswatch -->
     <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css"> 
    
@@ -23,37 +25,39 @@
 </head>
 <body>
 
+<div id="ourlogo">
+    
+   <h1>ROADTRIP!<br><h1>
+   <h2>Let us help you plan so you can focus on the fun!<h2>
+   <h3>Begin your journey by entering your start and end dates and the locations you want to visit in the fields below<br>and clicking on the submit buttons<h3> 
+   <div class="eventful-badge eventful-small">
+        <img src="http://api.eventful.com/images/powered/eventful_88x31.gif"
+          alt="Local Events, Concerts, Tickets">
+        <p><a href="http://eventful.com/">Events</a> by Eventful</p>
+    </div>     
+</div>
+<!-- Note:  find a good logo -->
 <!-- Container -->
 <div class="container">
 
-  <!-- Jumbotron -->
-  <div class="jumbotron">
-    <h1 align="center">Train Schedules</h1>
-    <h3 class="text-center">Plan Your Next Trip!!</h3>
-    <div id="time"><h3>Current Time</h3></div>
-    
-  </div>
-  
 
-  <!-- Train Schedule -->
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">Detailed Train Schedules</h3>
+      <h3 class="panel-title">Trip Options for</h3>
     </div>
-    <div class="panel-body">
-      <!-- Train Schedule Table -->
-        <table class="table table-striped table-hover" id="trainTable">
+    <div class="panel-body" id="wellSection">
+    
+        <table class="table table-striped table-hover" id="eventTable">
           <thead>
             <tr>
-              <th>Train Name</th>                      
-              <th>Destination</th>
-              <th>First Train of the Day</th>
-              <th>Frequency (min)</th>
-              <th>Duration (min)</th>
-              <th>Next Arrival</th>
-              <th>Minutes Away</th>
-              <th>Next Departure</th>
-              
+              <th>First Location Choices:  check the button beside the event you would like to attend.</th>                      
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th> 
+              <th></th>         
             </tr>
           </thead>
           <tbody>
@@ -69,15 +73,16 @@
   <!-- Add Train -->
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">Add Train</h3>
+      <h3 class="panel-title">Trip Details for: </h3><h3 class="panel-title">#tripNameInput</h3>
+       <h3 class="panel-title"></h3>
     </div>
-    <div class="panel-body">
+    <div class="panel-body>
 
-      <!-- Add Train Form -->
+  
 
         <div class="form-group">
-          <label class="control-label" for="inputDefault">Train Name</label>
-          <input type="text" class="form-control" id="trainNameInput">
+          <label class="control-label" for="inputDefault">Trip Name</label>
+          <input type="text" class="form-control" id="tripNameInput">
         </div>
 
         <div class="form-group">
@@ -85,50 +90,67 @@
           <input type="text" class="form-control" id="destinationInput">
         </div>
 
-
         <div class="form-group">
-          <label class="control-label" for="inputDefault">First Train(hh:mm military time)</label>
-          <input type="text" class="form-control" id="firstTrainTimeInput">
+          <label class="control-label" for="inputDefault">Start Date</label>
+          <input type="text" class="form-control" id="startDateInput">
         </div>
        
         <div class="form-group">
-          <label class="control-label" for="inputDefault">Frequency</label>
-          <input type="text" class="form-control" id="frequencyInput">
+          <label class="control-label" for="inputDefault">End Date</label>
+          <input type="text" class="form-control" id="endDateInput">
         </div>
-
-<!-- The Modal  for pop-up messages -->
-
-<!-- Veev added this line right here. This is Veev's line. It's a line. -->
-<div id="myModal" class="modal">
 
         <div class="form-group">
-          <label class="control-label" for="inputDefault">Duration(min)</label>
-          <input type="text" class="form-control" id="durationInput">
+          <label class="control-label" for="inputDefault">Genre</label>
+          <input type="text" class="form-control" id="genreInput">
         </div>
 
-        <a href="#" class="btn btn-primary" id="submitButton">Submit</a>
+        <a href="#" class="btn btn-primary" id="runSearch">Submit</a>
 
       <!-- Add Train Form -->
 
     </div>
   </div>
   <!-- Add Train -->
+<!-- The Modal  -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modalContent">
+    <span class="close">x</span>
+    <p><br>Error 999:<br><br>Search item cannot be blank.<br><br>Please enter the name of the place you wish to visit.</p>
+  </div>  <!--modal content -->
+
+</div> <!-- modal -->
+
+<div class="row">
+    <div class="col-sm-12">
+      
+      <!-- Line Break followed by closing -->
+   <!--   <hr> -->
+   <div class="signature">
+      <h5 class="text-center"><medium>Made by Dorie, Genevieve,and Mary just for you with lots and lots of  <i class="fa fa-heart"></i></medium></h5>
+   </div>
+    </div>  <!-- col -->
+  </div>   <!-- row -->
 
 <!-- Container -->
+
+
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyA-BifadmLX7IcYaPbAcLQaEmWjWAA1Rpo",
-    authDomain: "train-schedule-e35f5.firebaseapp.com",
-    databaseURL: "https://train-schedule-e35f5.firebaseio.com",
-    storageBucket: "",
+    apiKey: "AIzaSyB7dtBkT45_C-YHuQ6d6Xx9Usgl4az-NnQ",
+    authDomain: "tournotes-2d344.firebaseapp.com",
+    databaseURL: "https://tournotes-2d344.firebaseio.com",
+    storageBucket: "tournotes-2d344.appspot.com",
   };
   firebase.initializeApp(config);
 </script>
+    
 
-
-<script src="assets/javascript/logic.js"></script>
+//<script src="assets/javascript/TourNotesLogic.js"></script>
 
 
 

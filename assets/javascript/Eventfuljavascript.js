@@ -87,18 +87,50 @@ function setHeader(xhr) {
            
         
         .done(function(response) {
-            console.log(response);
-            console.log(event[0]);
-            console.log(event[1]);
-            console.log(event[2]);
-            console.log(event[3]);
-            console.log(event[4]);
-            console.log(event[5]);
-            console.log(event[6]);
-            console.log(event[7]);
-            console.log(event[8]);
-            console.log(event[9]);
-            console.log("second item: ",response.second_item);
+
+            console.log("first event: ",response.events.event[0].city_name);
+            console.log("first event: ",response.events.event[0].title);
+            console.log("first event: ",response.events.event[0].venue_name);
+
+      
+            console.log("second event: ",response.events.event[1].city_name);
+            console.log("second event: ",response.events.event[1].title);
+            console.log("second event: ",response.events.event[1].venue_name);       
+
+            console.log("third event: ",response.events.event[2].city_name);
+            console.log("third event: ",response.events.event[2].title);
+            console.log("third event: ",response.events.event[2].venue_name);
+
+            console.log("fourth event: ",response.events.event[3].city_name);
+            console.log("fourth event: ",response.events.event[3].title);
+            console.log("fourth event: ",response.events.event[3].venue_name);
+
+            console.log("fifth event: ",response.events.event[4].city_name);
+            console.log("fifth event: ",response.events.event[4].title);
+            console.log("fifth event: ",response.events.event[4].venue_name);
+
+      
+            console.log("sixth event: ",response.events.event[5].city_name);
+            console.log("sixth event: ",response.events.event[5].title);
+            console.log("sixth event: ",response.events.event[5].venue_name);       
+
+            console.log("seventh event: ",response.events.event[6].city_name);
+            console.log("seventh event: ",response.events.event[6].title);           
+            console.log("seventh event: ",response.events.event[6].venue_name);
+
+            console.log("eighth event: ",response.events.event[7].city_name);
+            console.log("eighth event: ",response.events.event[7].title);
+            console.log("eighth event: ",response.events.event[7].venue_name);
+
+            console.log("ninth event: ",response.events.event[8].city_name);
+            console.log("ninth event: ",response.events.event[8].title);
+            console.log("ninth event: ",response.events.event[8].venue_name);
+
+            console.log("tenth event: ",response.events.event[9].city_name);
+            console.log("tenth event: ",response.events.event[9].title);
+            console.log("tenth event: ",response.events.event[9].venue_name);
+
+
 
         })
 
