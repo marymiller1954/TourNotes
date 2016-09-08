@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Events Page</title>
+  
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	      
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+
+	<!-- Team CSS -->
+	<link href="assets/css/style2.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row" id="contentRow">
+        <div class="col s4">
+            
+            <br><br>
+            <h2>Tour Stops</h2>
+                          
+            	<ul class="collection">
+				      <!-- Dropdown Trigger -->
+				  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+				  <!-- Dropdown Structure -->
+				  <ul id='dropdown1' class='dropdown-content'>
+				    <li><a href="#!">one</a></li>
+				    <li><a href="#!">two</a></li>
+				    <li class="divider"></li>
+				    <li><a href="#!">three</a></li>
+				</ul>
+				    
+				    <li class="collection-item avatar">
+				    	<i class="material-icons circle blue">play_arrow</i>
+				   					   
+				    	<p id="name">Artist Name</p>
+
+				    	<p id="venue">Event Venue</p>
+				         
+				    	<p id="date">Date</p>
+
+				    	<p id="time">Time</p>
+				    </li>
+				    
+				    <li class="collection-item avatar active">
+				    	<i class="material-icons circle green">insert_chart</i>
+				    
+					    <p id="name">Artist Name</p>
+
+				    	<p id="venue">Event Venue</p>
+				         
+				    	<p id="date">Date</p>
+
+				    	<p id="time">Time</p>
+				      				      
+				    </li>
+				    
+				    <li class="collection-item avatar">
+				    	<i class="material-icons circle red">play_arrow</i>
+				    	<p id="name">Artist Name</p>
+
+				    	<p id="venue">Event Venue</p>
+				         
+				    	<p id="date">Date</p>
+
+				    	<p id="time">Time</p>				      
+				    </li>
+				</ul>
+              
+        </div>
+        
+      <!-- map Panel-->
+        <div class="col s8">        
+            <!-- map Box -->
+        	<div class="card-panel" id = "mapBox">
+			
+			<!-- end card panel div -->
+        	</div>
+        <!-- end map col div -->
+        </div>
+
+    <!--end content row div -->
+    </div>
+	
+
+
+	<!--Button row-->
+	<div class="row" id="btnRow">
+	
+		<div class="col s12">
+	      	<button class="btn waves-effect waves-light col s4" id ="toEventsBtn" type="submit" name="action">Go Back
+	        	<i class="material-icons left">send</i>
+	      	</button>
+
+	      	<button class="btn waves-effect waves-light col s4 offset-s4" id ="toEventsBtn" type="submit" name="action">Go Forward
+	        	<i class="material-icons right">send</i>
+	      	</button>
+		
+		<!-- end btn col div -->
+	    </div>	
+	<!-- End btn row div-->
+	</div>
+
+<!-- container div -->
+</div>
+
+<!-- JS Script Links -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/mapPage.js"></script>
+
+</body>
+</html>
