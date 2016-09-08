@@ -21,45 +21,57 @@
   <!-- <div class="container"> -->
 
     <div class="row" id="firstRow">
-         <div class="col s3 offset-s1">
-          <h2>Dates</h2>
-            <input type="date" class="datepicker">
-          <h3>to</h3>
-            <input type="date" class="datepicker">
-         <h2>Locations</h2>
-            <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="first_name">Start Location</label>
+        <div class="col s4">
+            <h2>Dates</h2>
+            
+            <div class="row">
+                <input type="date" class="datepicker col s4">
+            <h3 class="col s4">to</h3>
+                <input type="date" class="datepicker col s4">
             </div>
-            <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="first_name">Show Stop 3</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="first_name">Show Stop 2</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="first_name">Show Stop 3</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="first_name">End Location</label>
-            </div>
+          <!-- Enter trip points section + starting location -->
+            <h2>Tour Stops</h2>
+                <div class="input-field row">
+                  <input placeholder="Placeholder" id="startPnt" type="text" class="validate mapPnt">
+                  <label class="mapPntLabel startPntLabel" for="startPnt">Start Location</label>
+                </div>
+              
+            <!-- Stops Along the Way -->
+                <div class="input-field">
+                  <input placeholder="Placeholder" id="secondPnt" type="text" class="validate mapPnt">
+                  <label class="mapPntLabel secondPntLabel" for="secondPnt">Show 2</label>
+                </div>
+                
+                <div class="input-field">
+                  <input placeholder="Placeholder" id="thirdPnt" type="text" class="validate mapPnt">
+                  <label class="mapPntLabel thirdPntLabel" for="thirdPnt">Show 3</label>
+                </div>
+                
+                <div class="input-field">
+                  <input placeholder="Placeholder" id="fourthPnt" type="text" class="validate mapPnt">
+                  <label class="mapPntLabel fourthPntLabel" for="fourthPnt">Show 4</label>
+                </div>
+            
+            <!-- End Location -->
+                <div class="input-field">
+                  <input placeholder="Placeholder" id="endPnt" type="text" class="validate mapPnt">
+                  <label class="mapPntLabel endPntLabel" for="endPnt">End Location</label>
+                </div>
 
-            <div class="input-field col s12">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-             </select>
-            <label>Materialize Select</label>
-          </div>
-         </div>
-         
-         <div class="col s6 offset-s1">2</div>
+            <!-- Choose Your Genre -->
+                <div class="input-field">
+                  <select>
+                    <option value="">Choose your option</option>
+                    <option value="1">Hip Hop</option>
+                    <option value="2">Rock and Roll</option>
+                    <option value="3">Country</option>
+                  </select>
+                  <label class="genreLabel">Genre</label>
+                </div>
+        </div>
+           
+        <div class="col s6 offset-s1">2</div>
+           
     </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -67,15 +79,6 @@
 <script type="text/javascript" src="assets/javascript/mapPage.js"></script>
 
 </body>
-</html>
-
-<!--   </div> -->
-
-
-
-
-
-
 
 </body>
 </html>
