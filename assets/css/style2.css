@@ -4,3 +4,8 @@
 container {
     margin: 0px 0px 0px 0px;
 }
+#mapPanel {
+	height: 600px;
+	margin-top: 75px;
+}
+
