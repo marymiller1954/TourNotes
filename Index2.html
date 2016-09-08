@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Map Page</title>
-
-  <!-- CSS  -->
   
- <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
-
- <link href="assets/css/style2.css" type="text/css" rel="stylesheet">
+  <!-- Team CSS -->
+  <link href="assets/css/style2.css" type="text/css" rel="stylesheet">
 
 
 
@@ -20,60 +19,64 @@
 <body>
   <div class="container">
 
-    <div class="row" id="firstRow">
+<div class="container">
+    <div class="row" id="onlyRow">
         <div class="col s4">
-            <h2>Dates</h2>
             
-           <!--  <div class="row"> -->
-                <input type="date" class="datepicker col s4">
-            <h3 class="col s4">to</h3>
-                <input type="date" class="datepicker col s4">
-         <!--    </div> -->
+            <h2>Dates</h2>            
+            
+            <input type="date" class="datepicker col s4">           
+            <h3 class="col s4">to</h3>            
+            <input type="date" class="datepicker col s4">
+         
+
           <!-- Enter trip points section + starting location -->
             
-            <br><br><h2>Tour Stops</h2>
-                <div class="input-field">
-                  <input placeholder="Placeholder" id="startPnt" type="text" class="validate mapPnt">
-                  <label class="mapPntLabel startPntLabel" for="startPnt">Start Location</label>
-                </div>
+            <br><br>
+            <h2>Tour Stops</h2>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="startPnt" type="text" class="validate mapPnt">
+              <label class="mapPntLabel startPntLabel" for="startPnt">Start Location</label>
+            </div>
               
-            <!-- Stops Along the Way -->
-                <div class="input-field">
-                  <input placeholder="Placeholder" id="secondPnt" type="text" class="validate mapPnt">
-                  <label class="mapPntLabel secondPntLabel" for="secondPnt">Show 2</label>
-                </div>
+          <!-- Stops Along the Way -->
+            <div class="input-field">
+              <input placeholder="Placeholder" id="secondPnt" type="text" class="validate mapPnt">
+              <label class="mapPntLabel secondPntLabel" for="secondPnt">Show 2</label>
+            </div>
                 
-                <div class="input-field">
-                  <input placeholder="Placeholder" id="thirdPnt" type="text" class="validate mapPnt">
-                  <label class="mapPntLabel thirdPntLabel" for="thirdPnt">Show 3</label>
-                </div>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="thirdPnt" type="text" class="validate mapPnt">
+              <label class="mapPntLabel thirdPntLabel" for="thirdPnt">Show 3</label>
+            </div>
                 
-                <div class="input-field">
-                  <input placeholder="Placeholder" id="fourthPnt" type="text" class="validate mapPnt">
-                  <label class="mapPntLabel fourthPntLabel" for="fourthPnt">Show 4</label>
-                </div>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="fourthPnt" type="text" class="validate mapPnt">
+              <label class="mapPntLabel fourthPntLabel" for="fourthPnt">Show 4</label>
+            </div>
             
-            <!-- End Location -->
-                <div class="input-field">
-                  <input placeholder="Placeholder" id="endPnt" type="text" class="validate mapPnt">
-                  <label class="mapPntLabel endPntLabel" for="endPnt">End Location</label>
-                </div>
+        <!-- End Location -->
+            <div class="input-field">
+              <input placeholder="Placeholder" id="endPnt" type="text" class="validate mapPnt">
+              <label class="mapPntLabel endPntLabel" for="endPnt">End Location</label>
+            </div>
 
-            <!-- Choose Your Genre -->
-              <h4 class="genreLabel">Genre</h4>
-                <div class="input-field">
-                  <select>
-                    <option value="">Choose your option</option>
-                    <option value="1">Hip Hop</option>
-                    <option value="2">Rock and Roll</option>
-                    <option value="3">Country</option>
-                  </select> 
-                </div>
+        <!-- Choose Your Genre -->
+            <h4 class="genreLabel">Genre</h4>
+            
+            <div class="input-field">
+              <select>
+                <option value="">Choose your option</option>
+                <option value="1">Hip Hop</option>
+                <option value="2">Rock and Roll</option>
+                <option value="3">Country</option>
+              </select> 
+            </div>
               
-              <!-- Sumbit Map Button -->
-              <button class="btn waves-effect waves-light col s12" id ="submitMapBtn" type="submit" name="action">Map My Tour
-                  <i class="material-icons right">send</i>
-              </button>
+          <!-- Sumbit Map Button -->
+          <button class="btn waves-effect waves-light col s12" id ="submitMapBtn" type="submit" name="action">Map My Tour
+              <i class="material-icons right">send</i>
+          </button>
         </div>
         
       <!-- Map Panel w Next Page Button -->
@@ -89,15 +92,21 @@
                   <i class="material-icons right">send</i>
               </button>
           </div>
+        
+        <!-- col div -->
         </div>
-           
+    <!-- row div -->
     </div>
-
+<!-- container div -->
 </div>
 
+<!-- JS Script Links -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
 <script type="text/javascript" src="assets/javascript/mapPage.js"></script>
+
 
 </body>
 

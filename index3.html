@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Events Page</title>
 
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 	<title>Events Page</title>
@@ -16,18 +15,60 @@
 	<!-- Team CSS -->
 	<link href="assets/css/style2.css" type="text/css" rel="stylesheet">
 
-
 </head>
 <body>
 
-	<div class="row"> event stuff</div>
 
-	<div class="row"> next button, back button</div>
+<div class="container">
+    <div class="row" id="contentRow">
+        <div class="col s4">
+            
+            <br><br>
+            <h2>Tour Stops</h2>
+                          
+            <ul class="collection" id="">
+		      <li class="collection-item">Start</li>
+		      <li class="collection-item active">Stop 2</li>
+		      <li class="collection-item">Stop 3</li>
+		      <li class="collection-item">Stop 4</li>
+		      <li class="collection-item">Stop 5</li>
+   			</ul>
+
+              
+        </div>
+        
+      <!-- Event Panel-->
+        <div class="col s8">
+            <div class= "row">         
+            	<!-- Events Box -->
+            	<div class="card-panel" id = "eventsBox"></div>         
+        	</div>
+        <!-- end content col div -->
+        </div>
+    <!--end content row div -->
+    </div>
+	
+	<!--Button row-->
+	<div class="row" id="btnRow">
+	
+		<div class="col s12">
+	      	<button class="btn waves-effect waves-light col s3" id ="toEventsBtn" type="submit" name="action">Pick Your Shows
+	          <i class="material-icons right">send</i>
+	      	</button>
+		
+		<!-- end btn col div -->
+	    </div>	
+	<!-- End btn row div-->
+	</div>
+
+<!-- container div -->
+</div>
 
 <!-- JS Script Links -->
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
 <script type="text/javascript" src="assets/javascript/mapPage.js"></script>
 
 </body>
