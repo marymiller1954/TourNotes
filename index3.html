@@ -33,27 +33,83 @@
 		      <li class="collection-item">Stop 4</li>
 		      <li class="collection-item">Stop 5</li>
    			</ul>
-
               
         </div>
         
       <!-- Event Panel-->
-        <div class="col s8">
-            <div class= "row">         
-            	<!-- Events Box -->
-            	<div class="card-panel" id = "eventsBox"></div>         
+        <div class="col s8">        
+            <!-- Events Box -->
+        	<div class="card-panel" id = "eventsBox">
+        		
+				<ul class="collection">
+				    <li class="collection-item avatar">
+				    	<i class="material-icons circle purple">insert_chart</i>
+				    	<p id="name">Artist Name</p>
+
+				    	<p id="venue">Event Venue</p>
+				         
+				    	<p id="date">Date</p>
+
+				    	<p id="time">Time</p>				     
+				    </li>
+				    
+				    <li class="collection-item avatar">
+				    	<i class="material-icons circle blue">play_arrow</i>
+				   					   
+				    	<p id="name">Artist Name</p>
+
+				    	<p id="venue">Event Venue</p>
+				         
+				    	<p id="date">Date</p>
+
+				    	<p id="time">Time</p>
+				    </li>
+				    
+				    <li class="collection-item avatar active">
+				    	<i class="material-icons circle green">insert_chart</i>
+				    
+					    <p id="name">Artist Name</p>
+
+				    	<p id="venue">Event Venue</p>
+				         
+				    	<p id="date">Date</p>
+
+				    	<p id="time">Time</p>
+				      				      
+				    </li>
+				    
+				    <li class="collection-item avatar">
+				    	<i class="material-icons circle red">play_arrow</i>
+				    	<p id="name">Artist Name</p>
+
+				    	<p id="venue">Event Venue</p>
+				         
+				    	<p id="date">Date</p>
+
+				    	<p id="time">Time</p>				      
+				    </li>
+				</ul>
+			
+			<!-- end card panel div -->
         	</div>
-        <!-- end content col div -->
+        <!-- end event col div -->
         </div>
+
     <!--end content row div -->
     </div>
 	
+
+
 	<!--Button row-->
 	<div class="row" id="btnRow">
 	
 		<div class="col s12">
-	      	<button class="btn waves-effect waves-light col s3" id ="toEventsBtn" type="submit" name="action">Pick Your Shows
-	          <i class="material-icons right">send</i>
+	      	<button class="btn waves-effect waves-light col s4" id ="toEventsBtn" type="submit" name="action">Go Back
+	        	<i class="material-icons left">send</i>
+	      	</button>
+
+	      	<button class="btn waves-effect waves-light col s4 offset-s4" id ="toEventsBtn" type="submit" name="action">Go Forward
+	        	<i class="material-icons right">send</i>
 	      	</button>
 		
 		<!-- end btn col div -->
