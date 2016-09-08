@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Train Times</title>
-  <!-- Reset style sheet -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>TourNotes2</title>
 
-  <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- CSS  -->
+  
+ <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <!-- Custom CSS Bootswatch -->
-    <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css"> 
-   
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
-  <!-- Firebase -->
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <!-- Moment.js -->
-  <script src="http://momentjs.com/downloads/moment.js"></script>
+
+ <link href="assets/css/style2.css" type="text/css" rel="stylesheet">
+
+
 
 </head>
 <body>
+  <!-- <div class="container"> -->
 
-<!-- Container -->
-<div class="container">
-  <!-- Jumbotron -->
-  <div class="jumbotron">
-    <h1 align="center">Plan Your Roadtrip!</h1>
-    <h3 class="text-center">Fill in the Form Below and Click Submit</h3>
-    <div id="time"><h3>Current Time</h3></div>   
-  </div> <!-- Jumboron -->
+    <div class="row" id="firstRow">
+         <div class="col s3 offset-s1">
+          <h2>Dates</h2>
+            <input type="date" class="datepicker">
+          <h3>to</h3>
+            <input type="date" class="datepicker">
+         <h2>Locations</h2>
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">Start Location</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">Show Stop 3</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">Show Stop 2</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">Show Stop 3</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">End Location</label>
+            </div>
 
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+             </select>
+            <label>Materialize Select</label>
+          </div>
+         </div>
+         
+         <div class="col s6 offset-s1">2</div>
+    </div>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script type="text/javascript" src="assets/javascript/mapPage.js"></script>
 
-  <div id=giphysGoHere>
-     </div>
-  </div>
+</body>
+</html>
 
+<!--   </div> -->
 
-<div id="myModal" class="modal">
-  <!-- Modal content --> 
-  <div class="modalContent">
-    <span class="close">x</span>
-    <p><br>Error 999:<br><br>Search item cannot be blank.<br><br>Please enter the name of the place you wish to visit.</p>
-  </div>  <!--modal content -->
-</div> <!-- modal -->
-
-  
-<!-- Container -->
-
-  // Initialize Firebase
-  
-<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-<script>
-  // Initialize the TourNotes Firebase
-  var config = {
-    apiKey: "AIzaSyB7dtBkT45_C-YHuQ6d6Xx9Usgl4az-NnQ",
-    authDomain: "tournotes-2d344.firebaseapp.com",
-    databaseURL: "https://tournotes-2d344.firebaseio.com",
-    storageBucket: "",
-  };
-  firebase.initializeApp(config);
-</script>
-    
-
- <script type="text/javascript" src="assets/javascript/eventfuljavascript.js"></script>
 
 
 
