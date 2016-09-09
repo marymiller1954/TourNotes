@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>TourNotes2</title>
+
+  <!-- CSS  -->
+  
+ <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+
+ <link href="css/style1.css" type="text/css" rel="stylesheet">
+
+
+
+</head>
+<body>
+  <!-- <div class="container"> -->
+    <div class="container" id="main">
+     <div class="row" id="big_row">
+        <div class="col s5 " id="first_column">
+          
+          <section class="row" id="start_date">
+            <div class="input-field col3">              
+              <p>Start Date</p>
+                  <input type="date" class="datepicker">
+            </div>
+          </section>
+
+        <section id="location_inputs">
+              <p>Locations</p>
+                <div class="input-field col s12">
+                    <input placeholder="Placeholder" id="start_location" type="text" class="validate">
+                    <label for="start_location">Start Location</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">Show Stop 3</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">Show Stop 2</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">Show Stop 3</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">End Location</label>
+                </div>
+          </section>
+
+                <section class="row" id="end_date">
+                  <div class="input-field col3">              
+                    <p>End Date</p>
+                        <input type="date" class="datepicker">
+                  </div>
+                </section>
+
+
+
+    </div><!--row-->
+
+ <!--second column-->    
+      <div class="col s6 push-s1"><span class="map_box" href=""
+      >This is where we need to create a box for our interactive map.Do we need a paragraph with instructions below?</span>
+      
+         <section class="map_use_info">
+            <p>Drag and drop pins on the map to cooerspond to desired musical adventure locations. Don't forget to enter your start and end dates!</p>
+        </section>
+
+<!--genre option-->
+<!--Need to wrap with .input-field?
+Add .js-->    
+                <section class="row" id="genre_options">
+                  <div class="input-field col s12">
+                    <select>
+                      <option value="options" disabled selected>Choose your option</option>
+                      <option value="1">Rock</option>
+                      <option value="2">Classic</option>
+                      <option value="3">Techno</option>
+                    </select>
+                    <label>Choose your Options</label>
+                  </div>
+                </section>
+
+
+      <div class="row center">
+        <a href="index3.html" id="button_to_results" class="btn-large waves-effect waves-light green">Tour Notes</a>
+      </div>
+
+
+    </div><!--big roW-->
+
+
+    
+  </div><!--container-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script type="text/javascript" src="mappage.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
