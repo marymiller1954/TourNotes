@@ -2,7 +2,7 @@
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer({draggable: true});
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var map = new google.maps.Map(document.getElementById('mapBox'), {
           zoom: 13,
           center: {lat: 41.85, lng: -87.65},
           styles: [
@@ -82,7 +82,7 @@
               featureType: 'water',
               elementType: 'geometry',
               stylers: [
-                { color: '#007251'},
+                { color: '#'},
                 { saturation: 0}
               ]
             }, {
