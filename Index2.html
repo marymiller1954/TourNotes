@@ -18,63 +18,69 @@
 <body>
 
   <nav>
-      <div class="nav-wrapper"> 
+      <div class="nav-wrapper green"> 
 
         <a href="index3.html" class="brand-logo right">Next Page <i class="material-icons right">send</i></a>
         
         <ul id="nav-mobile">
-          <li><a class="brand-logo" href="#"><i class="material-icons">cloud</i>Map It</a></li>
+          <li><a class="brand-logo" href="#"><i class="material-icons">queu_music</i>Map It</a></li>
         </ul>
       </div>
   </nav>
 
 
-<div class="container">
+<div class="container lime green lighten-5">
 
     <div class="row" id="onlyRow">
-        <div class="col s4">          
-            <h2>Dates</h2>            
-            
+        <section>
+        <div class="col s5">  
+
+         <div class="card-panel col4 green lighten-1" id = "eventsBox">        
+            <h5>Pick your Dates</h5>            
             <div class = "row">
-              <input type="date" class="datepicker col s5">           
-              <h3 class="col s2">to</h3>            
-              <input type="date" class="datepicker col s4">
+              <input type="date" class="datepicker col s5 lime green lighten-5">
+           <!--   <div class="col s12 m5">
+        <div class="card-panel>   -->        
+              <h5 class="col s2">to</p></h5>            
+              <input type="date" class="datepicker col s5 lime green lighten-5">
             </div>
          
 
           <!-- Enter trip points section + starting location -->
             
             
-            <h2>Tour Stops</h2>
-            <div class="input-field">
-              <input placeholder="Placeholder" id="startPnt" type="text" class="validate mapPnt">
+            <h3>Tour Stops</h3>
+                      <div class="card-panel col4 green lighten-3" id = "eventsBox">
+
+            <div class="input-field lime green lighten-5">
+              <input placeholder="City, Country" id="startPnt" type="text" class="validate mapPnt">
               <label class="mapPntLabel startPntLabel" for="startPnt">Start Location</label>
             </div>
               
           <!-- Stops Along the Way -->
-            <div class="input-field">
+            <div class="input-field lime green lighten-5">
               <input placeholder="Placeholder" id="secondPnt" type="text" class="validate mapPnt">
               <label class="mapPntLabel secondPntLabel" for="secondPnt">Show 2</label>
             </div>
                 
-            <div class="input-field">
+            <div class="input-field green lighten-3">
               <input placeholder="Placeholder" id="thirdPnt" type="text" class="validate mapPnt">
               <label class="mapPntLabel thirdPntLabel" for="thirdPnt">Show 3</label>
             </div>
                 
-            <div class="input-field">
+            <div class="input-field green lighten-3">
               <input placeholder="Placeholder" id="fourthPnt" type="text" class="validate mapPnt">
               <label class="mapPntLabel fourthPntLabel" for="fourthPnt">Show 4</label>
             </div>
             
         <!-- End Location -->
-            <div class="input-field">
+            <div class="input-field green lighten-3">
               <input placeholder="Placeholder" id="endPnt" type="text" class="validate mapPnt">
               <label class="mapPntLabel endPntLabel" for="endPnt">End Location</label>
             </div>
 
         <!-- Choose Your Genre -->
-            <h4 class="genreLabel">Genre</h4>
+            <h6 class="genreLabel">Genre</h6>
             
             <div class="input-field">
               <select>
@@ -85,11 +91,16 @@
               </select> 
             </div>
         </div>
-        
+        </div>
+      </section>  
 <!--Map Panel-->
+     <section>
         <div class="col s7">
           <!--   Map Box -->
-                <div class="card-panel" id="mapBox"></div>    
+          <div class="card-panel col4 green lighten-3" id = "eventsBox">
+                <div class="card-panel" id="mapBox">
+                  
+                </div>    
         <!-- col div end -->
         </div>
 

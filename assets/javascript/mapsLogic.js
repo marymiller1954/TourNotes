@@ -2,7 +2,7 @@
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer({draggable: true});
-        var map = new google.maps.Map(document.getElementById('mapBox'), {
+        var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: {lat: 41.85, lng: -87.65},
           styles: [
@@ -15,14 +15,14 @@
               featureType: 'road',
               elementType: 'geometry',
               stylers: [
-                { color: '#000000'},
+                { color: '#616161'},
                 { saturation: 0}
               ] 
             }, {
               featureType: 'road',
               elementType: 'labels',
               stylers: [
-                { color: '#7CBEB7'},
+                { color: '#616161 '},
                 {weight: .5},
                 { saturation: 100}
               ]
@@ -30,21 +30,21 @@
               featureType: 'landscape',
               elementType: 'geometry',
               stylers: [
-                { color: '#684D94'}, 
+                { color: '#fafafa'}, 
                 { saturation: 0}
               ]
             }, {
               featureType: 'landscape',
               elementType: 'labels',
               stylers: [
-                { color: '#7CBEB7'},
+                { color: '#283593'},
                 { saturation: 100}
               ]
             }, {
               featureType: 'administrative',
               elementType: 'labels',
               stylers: [
-                { color: '#7CBEB7'},
+                { color: '#283593'},
                 { weight: .75},
                 { saturation: 100}
               ]
@@ -59,19 +59,11 @@
               featureType: 'poi',
               elementType: 'geometry',
               stylers: [
-                { color: '#ADC822'},
+                { color: '#80cbc4'},
                 { saturation: 0}
               ]
             }, {
               featureType: 'poi',
-              elementType: 'labels',
-              stylers: [
-                { color: '#7CBEB7'},
-                { weight: .75},
-                { saturation: 100}
-              ]
-            }, {
-              featureType: 'water',
               elementType: 'labels',
               stylers: [
                 { color: '#000000'},
@@ -80,16 +72,24 @@
               ]
             }, {
               featureType: 'water',
+              elementType: 'labels',
+              stylers: [
+                { color: '#283593'},
+                { weight: .75},
+                { saturation: 100}
+              ]
+            }, {
+              featureType: 'water',
               elementType: 'geometry',
               stylers: [
-                { color: '#007251'},
+                { color: '#bbdefb'},
                 { saturation: 0}
               ]
             }, {
               featureType: 'transit',
               elementType: 'labels',
               stylers: [
-                { color: '#7CBEB7'},
+                { color: '#ffeb3b '},
                 { weight: .75},
                 { saturation: 100}
               ]
