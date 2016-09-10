@@ -2,7 +2,7 @@
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer({draggable: true});
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var map = new google.maps.Map(document.getElementById('mapBox'), {
           zoom: 13,
           center: {lat: 41.85, lng: -87.65},
           styles: [
@@ -106,13 +106,15 @@
         });
         directionsDisplay.setMap(map);
 
-        var autoInputs = document.getElementsByClassName('inputs');
+        var autoInputs = document.getElementsByClassName('mapPnt');
+
+        console.log(autoInputs);
 
         for (i = 0; i < autoInputs.length; i++) {
             autocomplete = new google.maps.places.Autocomplete(autoInputs[i]);
         }
 
-        document.getElementById('submit').addEventListener('click', function() {
+        document.getElementById('submitMapBtn').addEventListener('click', function() {
           calculateAndDisplayRoute(directionsService, directionsDisplay);
         });
       }
@@ -120,10 +122,11 @@
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         var waypts = [];
 
+
         // calling waypoints info
         var checkboxArray = document.getElementsByClassName('waypoints');
         for (var i = 0; i < checkboxArray.length; i++) {
-          console.log(checkboxArray[i].value);
+          // console.log(checkboxArray[i].value);
           if (checkboxArray[i].value.length > 1) {
             waypts.push({
               location: checkboxArray[i].value,
@@ -133,8 +136,8 @@
         }
 
         directionsService.route({
-          origin: document.getElementById('start').value,
-          destination: document.getElementById('end').value,
+          origin: document.getElementById('startPnt').value,
+          destination: document.getElementById('endPnt').value,
           waypoints: waypts,
           optimizeWaypoints: true,
           travelMode: 'DRIVING'

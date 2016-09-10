@@ -22,9 +22,8 @@
 
         <a href="index3.html" class="brand-logo right">Next Page <i class="material-icons right">send</i></a>
         
-        <ul id="nav-mobile">
-          <li><a class="brand-logo" href="#"><i class="material-icons">queu_music</i>Map It</a></li>
-        </ul>
+
+        <a class="brand-logo left" id="mapIt" href="#"><i class="material-icons left">queue_music</i>Map It</a>
       </div>
   </nav>
 
@@ -32,10 +31,9 @@
 <div class="container lime green lighten-5">
 
     <div class="row" id="onlyRow">
-        <section>
-        <div class="col s5">  
-
-         <div class="card-panel col4 green lighten-1" id = "eventsBox">        
+        
+        <div class="col s5 green lighten-1">  
+        
             <h5>Pick your Dates</h5>            
             <div class = "row">
               <input type="date" class="datepicker col s5 lime green lighten-5">
@@ -50,7 +48,6 @@
             
             
             <h3>Tour Stops</h3>
-                      <div class="card-panel col4 green lighten-3" id = "eventsBox">
 
             <div class="input-field lime green lighten-5">
               <input placeholder="City, Country" id="startPnt" type="text" class="validate mapPnt">
@@ -59,17 +56,17 @@
               
           <!-- Stops Along the Way -->
             <div class="input-field lime green lighten-5">
-              <input placeholder="Placeholder" id="secondPnt" type="text" class="validate mapPnt">
+              <input placeholder="Placeholder" id="secondPnt" type="text" class="validate mapPnt waypoints">
               <label class="mapPntLabel secondPntLabel" for="secondPnt">Show 2</label>
             </div>
                 
             <div class="input-field green lighten-3">
-              <input placeholder="Placeholder" id="thirdPnt" type="text" class="validate mapPnt">
+              <input placeholder="Placeholder" id="thirdPnt" type="text" class="validate mapPnt waypoints">
               <label class="mapPntLabel thirdPntLabel" for="thirdPnt">Show 3</label>
             </div>
                 
             <div class="input-field green lighten-3">
-              <input placeholder="Placeholder" id="fourthPnt" type="text" class="validate mapPnt">
+              <input placeholder="Placeholder" id="fourthPnt" type="text" class="validate mapPnt waypoints">
               <label class="mapPntLabel fourthPntLabel" for="fourthPnt">Show 4</label>
             </div>
             
@@ -90,25 +87,39 @@
                 <option value="3">Country</option>
               </select> 
             </div>
+
+            <button class="btn waves-effect waves-light col s12" id ="submitMapBtn" type="submit" name="action">
+            	Map My Tour
+              <i class="material-icons right">send</i>
+          </button>
+        <!-- end left col div -->
         </div>
-        </div>
-      </section>  
+  
+     
 <!--Map Panel-->
-     <section>
+   
         <div class="col s7">
-          <!--   Map Box -->
-          <div class="card-panel col4 green lighten-3" id = "eventsBox">
-                <div class="card-panel" id="mapBox">
+        	<!--   Map Box -->
+        	
+                <div class="card-panel green lighten-3" id="mapBox">
                   
                 </div>    
         <!-- col div end -->
-        </div>
-
+		</div>
 
     <!-- onlyRow div  -->
     </div>
 <!-- container div -->
 </div>
+
+
+
+
+
+
+
+
+
 
 <!-- JS Script Links -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -117,7 +128,8 @@
 
 <script type="text/javascript" src="assets/javascript/mapPage.js"></script>
 
-<script type="text/javascript" src="assets/javascript/mapPage.js"></script>
+<script type="text/javascript" src="assets/javascript/mapsLogic.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD32G5R_VIZTblZ9lwWvjYeKckxKYXI6Lk&libraries=places&callback=initMap"></script>
 
 
 </body>
