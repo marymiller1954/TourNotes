@@ -108,7 +108,7 @@
 
         var autoInputs = document.getElementsByClassName('mapPnt');
 
-        console.log(autoInputs);
+      
 
         for (i = 0; i < autoInputs.length; i++) {
             autocomplete = new google.maps.places.Autocomplete(autoInputs[i]);
@@ -126,7 +126,7 @@
         // calling waypoints info
         var checkboxArray = document.getElementsByClassName('waypoints');
         for (var i = 0; i < checkboxArray.length; i++) {
-          // console.log(checkboxArray[i].value);
+          
           if (checkboxArray[i].value.length > 1) {
             waypts.push({
               location: checkboxArray[i].value,
