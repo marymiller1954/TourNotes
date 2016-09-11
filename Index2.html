@@ -20,7 +20,7 @@
   <nav>
       <div class="nav-wrapper green"> 
 
-        <a href="index3.html" class="brand-logo right">Next Page <i class="material-icons right">send</i></a>
+        <a href="index3.html" id="runSearch" class="brand-logo right">Next Page <i class="material-icons right">send</i></a>
         
 
         <a class="brand-logo left" id="mapIt" href="#"><i class="material-icons left">queue_music</i>Map It</a>
@@ -34,14 +34,14 @@
         
         <div class="col s5 green lighten-1">  
         
-            <h5>Pick your Dates</h5>            
+            <!-- <h5>Pick your Dates</h5>            
             <div class = "row">
-              <input type="date" class="datepicker col s5 lime green lighten-5">
-           <!--   <div class="col s12 m5">
-        <div class="card-panel>   -->        
+              <input type="date" class="datepicker col s5 lime green lighten-5" id="startDate">
+             <div class="col s12 m5">
+        <div class="card-panel>          
               <h5 class="col s2">to</p></h5>            
-              <input type="date" class="datepicker col s5 lime green lighten-5">
-            </div>
+              <input type="date" class="datepicker col s5 lime green lighten-5" id="endDate">
+            </div> -->
          
 
           <!-- Enter trip points section + starting location -->
@@ -49,49 +49,63 @@
             
             <h3>Tour Stops</h3>
 
-            <div class="input-field lime green lighten-5">
-              <input placeholder="City, Country" id="startPnt" type="text" class="validate mapPnt">
-              <label class="mapPntLabel startPntLabel" for="startPnt">Start Location</label>
+            <div class="input-field lime green lighten-5 row">
+            		
+		            	<input type="date" class="datepicker col s2 lime green lighten-5" id="startDate">
+		              <input placeholder="Start Location" id="startPnt" type="text" class="validate mapPnt col s10">
+		              
             </div>
+		           
               
           <!-- Stops Along the Way -->
-            <div class="input-field lime green lighten-5">
-              <input placeholder="Placeholder" id="secondPnt" type="text" class="validate mapPnt waypoints">
-              <label class="mapPntLabel secondPntLabel" for="secondPnt">Show 2</label>
+            <div class="input-field lime green lighten-5 row">
+            		
+		            	<input type="date" class="datepicker col s2 lime green lighten-5" id="secondDate">
+		              <input placeholder="City, Country" id="secondPnt" type="text" class="validate mapPnt waypoints col s10">
+		              
+
             </div>
                 
-            <div class="input-field green lighten-3">
-              <input placeholder="Placeholder" id="thirdPnt" type="text" class="validate mapPnt waypoints">
-              <label class="mapPntLabel thirdPntLabel" for="thirdPnt">Show 3</label>
+            <div class="input-field lime green lighten-5 row">
+            		
+		            	<input type="date" class="datepicker col s2 lime green lighten-5" id="thirdDate">
+		              <input placeholder="City, Country" id="thirdPnt" type="text" class="validate mapPnt waypoints col s10">
+		              
+
             </div>
                 
-            <div class="input-field green lighten-3">
-              <input placeholder="Placeholder" id="fourthPnt" type="text" class="validate mapPnt waypoints">
-              <label class="mapPntLabel fourthPntLabel" for="fourthPnt">Show 4</label>
+            <div class="input-field lime green lighten-5 row">
+            		
+		            	<input type="date" class="datepicker col s2 lime green lighten-5" id="fourthDate">
+		              <input placeholder="City, Country" id="fourthPnt" type="text" class="validate mapPnt waypoints col S10">
+
             </div>
             
         <!-- End Location -->
-            <div class="input-field green lighten-3">
-              <input placeholder="Placeholder" id="endPnt" type="text" class="validate mapPnt">
-              <label class="mapPntLabel endPntLabel" for="endPnt">End Location</label>
+            <div class="input-field lime green lighten-5 row">
+            		
+		            	<input type="date" class="datepicker col s2 lime green lighten-5" id="endDate">
+		              <input placeholder="City, Country" id="endPnt" type="text" class="validate mapPnt col s10">
+		              
             </div>
 
         <!-- Choose Your Genre -->
             <h6 class="genreLabel">Genre</h6>
             
-            <div class="input-field">
+            <div id="genreInput" class="input-field">
               <select>
                 <option value="">Choose your option</option>
-                <option value="1">Hip Hop</option>
-                <option value="2">Rock and Roll</option>
-                <option value="3">Country</option>
+                <option value="Bluegrass">Bluegrass</option>
+                <option value="Rock">Rock</option>
+                <option value="Country">Country</option>
+                <option value="Jazz">Jazz</option>
               </select> 
             </div>
 
             <button class="btn waves-effect waves-light col s12" id ="submitMapBtn" type="submit" name="action">
             	Map My Tour
               <i class="material-icons right">send</i>
-          </button>
+            </button>
         <!-- end left col div -->
         </div>
   
@@ -112,25 +126,39 @@
 <!-- container div -->
 </div>
 
-
-
-
-
-
-
-
-
-
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB7dtBkT45_C-YHuQ6d6Xx9Usgl4az-NnQ",
+    authDomain: "tournotes-2d344.firebaseapp.com",
+    databaseURL: "https://tournotes-2d344.firebaseio.com",
+    storageBucket: "tournotes-2d344.appspot.com",
+  };
+  firebase.initializeApp(config);</script>
+  </script>
 <!-- JS Script Links -->
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
+
+
+
 <script type="text/javascript" src="assets/javascript/mapPage.js"></script>
 
+
 <script type="text/javascript" src="assets/javascript/mapsLogic.js"></script>
+
+<script src="assets/javascript/TourNotesLogic9.js"></script>
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD32G5R_VIZTblZ9lwWvjYeKckxKYXI6Lk&libraries=places&callback=initMap"></script>
 
+<script src="http://momentjs.com/downloads/moment.js"></script>
+
+
+   
 
 </body>
 
