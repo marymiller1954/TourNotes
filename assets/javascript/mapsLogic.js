@@ -1,4 +1,27 @@
 
+var genre = "";    
+var destination1 = "";
+var destination2 = "";
+var destination3 = "";
+var destination4 = "";
+var destination5 = "";
+
+function setVariables (){
+    genre = $("#genreInput").val().trim();
+    destination1 = $("#startPnt").val().trim();
+    destination2 = $("#secondPnt").val().trim();
+    destination3 = $("#thirdPnt").val().trim();
+    destination4 = $("#fourthPnt").val().trim();
+    destination5 = $("#endPnt").val().trim();
+
+    console.log("genre: ",genre);
+    console.log("destination 1: ",destination1);
+    console.log("destination 2: ",destination2);
+    console.log("destination 3: ",destination3);
+    console.log("destination 4: ",destination4);
+    console.log("destination 5: ",destination5);
+}
+
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer({draggable: true});
@@ -116,6 +139,7 @@
 
         document.getElementById('submitMapBtn').addEventListener('click', function() {
           calculateAndDisplayRoute(directionsService, directionsDisplay);
+          setVariables();
         });
       }
 
@@ -161,3 +185,9 @@
           }
         });
       }
+
+
+
+
+
+

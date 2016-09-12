@@ -17,17 +17,17 @@ console.log("starting the program!");
 function runQuery() { 
 	console.log("entering runQuery");
 	console.log("this is the new version");
- document.getElementById('query').addEventListener('click', function() {
+ // document.getElementById('query').addEventListener('click', function() {
 //	     $("#query").on("click", function(){
 		// Grabs user input
 		console.log("Processing the Click");
-		var genre = $("#genreInput").val().trim();
-		console.log("genre: ",genre);
-		var destination1 = $("#startPnt").val().trim();
-		var destination2 = $("#secondPnt").val().trim();
-		var destination3 = $("#thirdPnt").val().trim();
-		var destination4 = $("#fourthPnt").val().trim();
-		var destination5 = $("#endDate").val().trim();
+		// var genre = $("#genreInput").val().trim();
+		// console.log("genre: ",genre);
+		// var destination1 = $("#startPnt").val().trim();
+		// var destination2 = $("#secondPnt").val().trim();
+		// var destination3 = $("#thirdPnt").val().trim();
+		// var destination4 = $("#fourthPnt").val().trim();
+		// var destination5 = $("#endDate").val().trim();
 
 		console.log("destination 1: ",destination1);
 
@@ -38,11 +38,6 @@ function runQuery() {
 		console.log("destination 4: ",destination4);
 
 		console.log("destination 5: ",destination5);
-
-
-
-
-
 
 
  	    var destination1 = destination1.substr(0,str.indexOf(' '));
@@ -157,7 +152,7 @@ console.log("leaving the for loop");
 
         } //.done
         console.log("ending the on click");
- })   // on click
+ // })   // on click
 }// end runQuery */
 console.log("going to run query");
 runQuery();
