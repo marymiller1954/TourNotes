@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<meta charset="UTF-8" Name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 	<title>Events Page</title>
   
 	<!--Import Google Icon Font-->
@@ -15,13 +15,22 @@
 	<!-- Team CSS -->
 	<link href="assets/css/style2.css" type="text/css" rel="stylesheet">
 
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+       <script src="http://momentjs.com/downloads/moment.js"></script>
+     <script src="assets/javascript/TourNotesLogic29.js"></script>
 </head>
+
+
+
+
+
 <body>
 
   <nav>
-      <div class="nav-wrapper green"> 
+      <div class="nav-wrapper deep-purple lighten-6"> 
 
-        <a href="index4.html" class="brand-logo right">Next Page <i class="material-icons right">send</i></a>
+        <a href="index4.html" class="brand-logo right" id ="nextPageBtn"> Next Page <i class="material-icons right">send</i></a>
         
         <ul id="nav-mobile">
           <li><a class="brand-logo left" href="index2.html"><i class="material-icons">queue_music</i>Go Back</a></li>
@@ -29,7 +38,7 @@
       </div>
   </nav>
 
-<div class="container lime lighten-5">
+<div class="container deep-purple lighten-5">
     <div class="row" id="contentRow">
         <div class="col s4">
             
@@ -37,11 +46,11 @@
             <h2>Tour Stops</h2>
                           
             <ul class="collection" id="">
-		      <li class="collection-item green lighten-2">Start</li>
-		     <li class="collection-item green lighten-3">Stop 2</li>
-		      <li class="collection-item green lighten-2">Stop 3</li>
-		      <li class="collection-item green lighten-3">Stop 4</li>
-		      <li class="collection-item green lighten-2">Stop 5</li>
+		      <li class="collection-item deep-purple lighten-4">Start</li>
+		      <li class="collection-item deep-purple lighten-1">Stop 2</li>
+		      <li class="collection-item deep-purple lighten-4">Stop 3</li>
+		      <li class="collection-item deep-purple lighten-1">Stop 4</li>
+		      <li class="collection-item deep-purple lighten-4">Stop 5</li>
    			</ul>
               
         </div>
@@ -49,53 +58,53 @@
       <!-- Event Panel-->
         <div class="col s7">        
             <!-- Events Box -->
-        	<div class="card-panel green lighten-1" id = "eventsBox">
+        	<div class="card-panel deep-purple lighten-4" id = "eventsBox">
         		
 				<ul class="collection">
-				    <li class="collection-item avatar lime lighten-5">
-				    	<i class="material-icons circle green darken-1">album</i>
-				    	<p id="name">Artist Name: St. Lucia</p>
-
-				    	<p id="venue">Event Venue: The Fillmore Charlotte</p>
+				    <li class="collection-item avatar deep-purple lighten-3">
+				    	<i class="material-icons circle deep-purple lighten-2">album</i>				    	
+				    	<p id="Name">Artist</p>
+				    	
+				    	<p id="Venue">Venue</p>
 				         
-				    	<p id="date">Date:  9/17/16</p>
+				    	<p id="Date">Date</p>
 
-				    	<p id="time">Time: 10:00 pm</p>				     
+				    	<p id="Time">Time</p>			     
 				    </li>
 				    
-				    <li class="collection-item avatar lime lighten-5">
-				    	<i class="material-icons circle green darken-1">album</i>
+				    <li class="collection-item avatar deep-purple lighten-3">
+				    	<i class="material-icons circle deep-purple lighten-2">album</i>
 				   					   
-				    	<p id="name">Artist Name: Chaquis Maliq</p>
-
-				    	<p id="venue">Event Venue: WTVI</p>
+				    	<p id="Name">Artist</p>
+				    	
+				    	<p id="Venue">Venue</p>
 				         
-				    	<p id="date">Date: 9/17/16</p>
+				    	<p id="Date">Date</p>
 
-				    	<p id="time">Time: 10:00 pm</p>
+				    	<p id="Time">Time</p>
 				    </li>
 				    
-				    <li class="collection-item avatar lime lighten-5">
-				    	<i class="material-icons circle green darken-1">album</i>
-				    	<p id="name">Artist Name: Corinna Bailey Rae</p>
-
-				    	<p id="venue">Event Venue: The Neighborhood Theatre</p>
+				    <li class="collection-item avatar deep-purple lighten-3">
+				    	<i class="material-icons circle deep-purple lighten-2">album</i>
+				    	<p id="Name">Artist</p>
+				    	
+				    	<p id="Venue">Venue</p>
 				         
-				    	<p id="date">Date: 9/17/16</p>
+				    	<p id="Date">Date</p>
 
-				    	<p id="time">Time: 10:00 pm</p>	
+				    	<p id="Time">Time</p>	
 				      				      
 				    </li>
 				    
-				    <li class="collection-item avatar lime lighten-5">
-				    	<i class="material-icons circle green darken-1">album</i>
-				    	<p id="name">Artist Name</p>
+				    <li class="collection-item avatar deep-purple lighten-3">
+				    	<i class="material-icons circle deep-purple lighten-2">album</i>
+				    	<p id="Name">Artist</p>
 
-				    	<p id="venue">Event Venue</p>
+				    	<p id="Venue">Venue</p>
 				         
-				    	<p id="date">Date</p>
+				    	<p id="Date">Date</p>
 
-				    	<p id="time">Time</p>				      
+				    	<p id="Time">Time</p>				      
 				    </li>
 				</ul>
 			
@@ -106,17 +115,108 @@
 
     <!--end content row div -->
     </div>
-	
 
 <!-- container div -->
 </div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modalContent">
+    <span class="close">x</span>
+    <p><br>Error 999:<br><br>Oops!<br><br>First stop and genre cannot be blank.<br><br>Please enter the the missing information.</p>
+  </div>
+
+</div>
+
 </body>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modalContent">
+    <span class="close">x</span>
+    <p><br>Error 999:<br><br>Oops!<br><br>First stop and genre cannot be blank.<br><br>Please enter the the missing information.</p>
+  </div>
+
+</div>
+
+<script>
+var destination1 = $("#startPnt").val().trim();
+ function checkforerrors() {
+      function errormsg() {
+                         var modal = document.getElementById('myModal');
+                         var span = document.getElementsByClassName("close")[0];
+                          modal.style.display = "block";
+                         span.onclick = function() {
+                          modal.style.display = "none";
+                         }// end span.onclickS
+                         window.onclick = function(event) {
+                          if (event.target == modal) {
+                              modal.style.display = "none";
+                          } //end if
+                         }  //end window.onclick
+                         return;
+       }  //end function error message
+}  // checkforerrors
+
+console.log("destination1 in index3: ",destination1);
+console.log("genre in index3: ",genre);
+if (destination1 == undefined) {
+console.log("we have a problem!");
+checkforerrors();
+//return;
+} 
+
+if (genre == undefined) {
+console.log("we have a problem!");
+checkforerrors();
+//return;
+}
+   
+    var destination3 = $("#secondPnt").val().trim();
+    var destination3 = $("#thirdPnt").val().trim();
+    var destination4 = $("#fourthPnt").val().trim();
+    var destination5 = $("#endPnt").val().trim();
+    console.log("destination1: ",destination1);
+    console.log("destination 1: ",destination1);
+    console.log("destination 2: ",destination2);
+    console.log("destination 3: ",destination3);
+    console.log("destination 4: ",destination4);
+    console.log("destination 5: ",destination5);
+    var startDate = $("#startDate").val().trim();
+    var secondDate = $("#secondDate").val().trim();
+    var thirdDate = $("#thirdDate").val().trim();
+    var fourthDate = $("#fourthDate").val().trim();
+    var fifthDate = $("#endDate").val().trim();
+    sessionStorage.setItem('genre',genre);
+    sessionStorage.setItem('destination1',destination1);
+    sessionStorage.setItem('destination2',destination2);
+    sessionStorage.setItem('destination3',destination3);
+    sessionStorage.setItem('destination4',destination4);
+    sessionStorage.setItem('destination5',destination5);
+    sessionStorage.setItem('startDate',startDate);
+    sessionStorage.setItem('secondDate',secondDate);
+    sessionStorage.setItem('thirdDate',thirdDate);
+    sessionStorage.setItem('fourthDate',fourthDate);
+    sessionStorage.setItem('fifthDate',fifthDate);
+    console.log("Date 1: ",startDate);
+    console.log("Date 2: ",secondDate);
+    console.log("Date 3: ",thirdDate);
+    console.log("Date 4: ",fourthDate);
+    console.log("Date 5: ",fifthDate);
+    console.log("genre: ",genre);
+    var startcityfromstorage = sessionStorage.destination1;
+    console.log("startcity in sessionStorage is: ",startcityfromstorage);
+
+
+</script>  
+
 <!-- JS Script Links -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
-<script src="assets/javascript/TourNotesLogic11.js"></script>
+<!--<script src="assets/javascript/TourNotesLogic17.js"></script>-->
 
 <script type="text/javascript" src="assets/javascript/mapPage.js"></script>
 

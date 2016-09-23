@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Map Page</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Team CSS -->
+  <link href="assets/css/style2.css" type="text/css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+</head>
+<body>
+
+  <nav>
+      <div class="nav-wrapper deep-purple lighten-1"> 
+
+       <a href="index3.html" id="query" class="brand-logo right">Next Page <i class="material-icons right">
+send</i></a>
+        
+<!--  <a href="index3.html" class="btn btn-primary" id="query">Next Page</a> -->
+
+        <a class="brand-logo left" id="mapIt" href="#"><i class="material-icons left">queue_music</i>Map It</a>
+      </div>
+  </nav>
+
+
+<div class="container deep-purple lighten-3">
+
+    <div class="row" id="onlyRow">
+        
+        <div class="col s5 deep-purple lighten-3">  
+        
+            <!-- <h5>Pick your Dates</h5>            
+            <div class = "row">
+              <input type="date" class="datepicker col s5 lime green lighten-5" id="startDate">
+             <div class="col s12 m5">
+        <div class="card-panel>          
+              <h5 class="col s2">to</p></h5>            
+              <input type="date" class="datepicker col s5 lime green lighten-5" id="endDate">
+            </div> -->
+         
+
+          <!-- Enter trip points section + starting location -->
+            
+            
+            <h3>Tour Stops</h3>
+
+            <div class="input-field deep-purple lighten-3 row">
+                
+                  <input placeholder="Date"  type="date" class="datepicker col s4 deep-purple lighten-2" id="startDate">
+                  <input placeholder="Start Location" id="startPnt" type="text" class="validate mapPnt col s8">
+                  
+            </div>
+               
+              
+          <!-- Stops Along the Way -->
+            <div class="input-field deep-purple lighten-3 row">
+                
+                  <input placeholder="Date"  type="date" class="datepicker col s4 deep-purple lighten-2" id="secondDate">
+                  <input placeholder="City, Country" id="secondPnt" type="text" class="validate mapPnt waypoints col s8">
+                  
+
+            </div>
+                
+            <div class="input-field deep-purple lighten-3 row">
+                
+                <input placeholder="Date" type="date" class="datepicker col s4 deep-purple lighten-2" id="thirdDate">
+                  <input placeholder="City, Country" id="thirdPnt" type="text" class="validate mapPnt waypoints col s8">
+                  
+
+            </div>
+                
+            <div class="input-field deep-purple lighten-3 row">
+                
+                  <input placeholder="Date" type="date" class="datepicker col s4 deep-purple lighten-2" id="fourthDate">
+                  <input placeholder="City, Country" id="fourthPnt" type="text" class="validate mapPnt col s8">
+                  
+            </div>
+            
+            <div class="input-field deep-purple lighten-3 row">
+                
+                  <input placeholder="Date" type="date" class="datepicker col s4 deep-purple lighten-2" id="endDate">
+                  <input placeholder="City, Country" id="endPnt" type="text" class="validate mapPnt col s8">
+                  
+            </div>
+
+        <!-- Choose Your Genre -->
+           <h6 class="genreLabel">Genre</h6>
+            
+           <div id="genreInput" class="input-field">
+              <select id="genre">
+                <option value="">Choose your option</option>
+                <option value="Bluegrass">Bluegrass</option>
+                <option value="Rock">Rock</option>
+                <option value="Country">Country</option>
+                <option value="Jazz">Jazz</option>
+              </select> 
+           </div>
+            <button class="deep-purple btn waves-effect waves-light col s12" id ="submitChoicesBtn" type="submit" name="action">
+              Save My  Choices
+              <i class="material-icons right">send</i>
+            </button>
+            <button class="deep-purple btn waves-effect waves-light col s12" id ="submitMapBtn" type="submit" name="action">
+              Map My Tour
+              <i class="material-icons right">send</i>
+            </button>
+        <!-- end left col div -->
+        </div>
+
+     
+<!--Map Panel-->
+   
+        <div class="col s7">
+          <!--   Map Box -->
+          
+                <div class="card-panel deep-purple lighten-1" id="mapBox">
+                  
+                </div>    
+        <!-- col div end -->
+    </div>
+
+    <!-- onlyRow div  -->
+    </div>
+<!-- container div -->
+</div>
+<!-- The Modal  -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modalContent">
+    <span class="close">x</span>
+    <p><br>Error 999:<br><br>Oops!<br><br>First stop and genre cannot be blank.<br><br>Please enter the the missing information.</p>
+  </div>
+
+</div>
+</body>
+<!-- save data inputs to sessionStorage for next page -->
+<script>
+
+ 
+function errormsg() {
+        console.log("Preparing error message");
+                         var modal = document.getElementById('myModal');
+                         var span = document.getElementsByClassName("close")[0];
+                          modal.style.display = "block";
+                         span.onclick = function() {
+                          modal.style.display = "none";
+                         };// end span.onclickS
+                         window.onclick = function(event) {
+                          if (event.target == modal) {
+                              modal.style.display = "none";
+                             return;
+                          } //end if
+                         }; //window.onclick
+      } //errormsg
+    
+        
+//} //checkerrors
+
+
+$("#submitChoicesBtn").on("click", function(){   
+    
+    var destination1 = $("#startPnt").val().trim();
+    var destination2 = $("#secondPnt").val().trim();
+    var destination3 = $("#thirdPnt").val().trim();
+    var destination4 = $("#fourthPnt").val().trim();
+    var destination5 = $("#endPnt").val().trim();
+    var startDate = $("#startDate").val().trim();
+    var secondDate = $("#secondDate").val().trim();
+    var thirdDate = $("#thirdDate").val().trim();
+    var fourthDate = $("#fourthDate").val().trim();
+    var fifthDate = $("#endDate").val().trim();
+    var genre = $("#genre").val().trim();
+    sessionStorage.setItem('destination1',destination1);
+    sessionStorage.setItem('destination2',destination2);
+    sessionStorage.setItem('destination3',destination3);
+    sessionStorage.setItem('destination4',destination4);
+    sessionStorage.setItem('destination5',destination5);
+    sessionStorage.setItem('startDate',startDate);
+    sessionStorage.setItem('secondDate',secondDate);
+    sessionStorage.setItem('thirdDate',thirdDate);
+    sessionStorage.setItem('fourthDate',fourthDate);
+    sessionStorage.setItem('fifthDate',fifthDate);
+    sessionStorage.setItem('genre',genre);
+    console.log("destination1 1: ",destination1);
+    console.log("destination2: ",destination2);
+    console.log("destination3: ",destination3);
+    console.log("destination4: ",destination4);
+    console.log("destination5: ",destination5);
+    console.log("date 1: ",startDate);
+    console.log("date 2: ",secondDate);
+    console.log("date 3: ",thirdDate);
+    console.log("date 4: ",fourthDate);
+    console.log("date 5: ",fifthDate);
+    console.log("genre: ",genre);
+    var startcityfromstorage = sessionStorage.destination1;
+    console.log("startcity in sessionStorage is: ",startcityfromstorage);
+
+if (destination1 === "" || destination1 === undefined) {
+        console.log("we have a start city problem!");
+        errormsg();
+      } // if
+
+  if (genre === "" || genre === undefined) {
+      console.log("we have a genre problem!");
+      errormsg();
+      } // if
+
+
+});
+  </script> 
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB7dtBkT45_C-YHuQ6d6Xx9Usgl4az-NnQ",
+    authDomain: "tournotes-2d344.firebaseapp.com",
+    databaseURL: "https://tournotes-2d344.firebaseio.com",
+    storageBucket: "tournotes-2d344.appspot.com",
+  };
+  firebase.initializeApp(config);</script>
+
+
+  </script>
+
+
+<!-- JS Script Links -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/mapPage.js"></script>
+
+<script type="text/javascript" src="assets/javascript/mapsLogic.js"></script>
+
+<!-- <script src="assets/javascript/TourNotesLogic9.js"></script> -->
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD32G5R_VIZTblZ9lwWvjYeKckxKYXI6Lk&libraries=places&callback=initMap"></script>
+
+<script src="http://momentjs.com/downloads/moment.js"></script>
+
+
+</html>

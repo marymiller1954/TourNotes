@@ -10,65 +10,69 @@
 	      
 	<!--Import materialize.css-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-
+ 	<link href="assets/css/style2.css" type="text/css" rel="stylesheet">
 
 	<!-- Team CSS -->
 	<link href="assets/css/style2.css" type="text/css" rel="stylesheet">
 
 </head>
+
+
+
+
 <body>
 
   <nav>
-      <div class="nav-wrapper"> 
+      <div class="deep-purple lighten-1 nav-wrapper"> 
 
-        <a href="#" class="brand-logo right">Print Directions<i class="material-icons right">send</i></a>
+        <a href="#" class="deep-purple lighten-1 brand-logo right">Print Directions<i class="material-icons right">send</i></a>
         
         <ul id="nav-mobile">
-          <li><a class="brand-logo left" href="index3.html"><i class="material-icons">cloud</i>Go Back</a></li>
+          <li><a class="deep-purple lighten-1 brand-logo left" href="index3.html"><i class="material-icons">cloud</i>Go Back</a></li>
       </div>
   </nav>
 
-<div class="container">
-    <div class="row" id="contentRow">
-        <div class="col s4" id="cityCol">
+<div class="deep-purple lighten-3 container">
+    <div class="deep-purple lighten-3 row" id="contentRow">
+        <div class="deep-purple lighten-3 col s4" id="cityCol">
             
             <br><br>
             <h2>Tour Stops</h2>
 				  
 		  <!-- Start City -->
-			<a class='dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>Start City:  Charlotte, NC</a>
+			<a class='deep-purple lighten-2 dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>Start City</a>
 		  
-			<ul id='dropdown1' class='dropdown-content'>
-			    <li>Artist Name: St. Lucia</li>
-			    <li>Venue: The Fillmmore Charlote/li>
-			    <li>Date:  9/17/16</li>
-			    <li>Time:  10:00 pm</li>
+			<ul id='deep-purple lighten-2 dropdown1' class='dropdown-content'>
+			    <li>Artist Name</li>
+			    <li>Venue</li>
+			    <li>Date</li>
+			    <li>Time</li>
 			</ul>
 		    
 		    <!-- 2 City -->
-			<a class='dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>2 City</a>
+			<a class='deep-purple lighten-2 dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>Second City</a>
 		  
-			<ul id='dropdown1' class='dropdown-content'>
-			    <li>Artist Name: Chaquis Maliq</li>
-			    <li>Venue: WTVI</li>
-			    <li>Date: 9/17/16</li>
-			    <li>Time: 10:00 pm</li>
+			<ul id='deep-purple lighten-2 dropdown1' class='dropdown-content'>
+			    <li>Artist Name</li>
+			    <li>Venue</li>
+			    <li>Date</li>
+			    <li>Time</li>
 			</ul>
 		    
 		    <!-- 3 City --> 
-			<a class='dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>3 City</a>
+			<a class='deep-purple lighten-2 dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>Third City</a>
 		  
-			<ul id='dropdown1' class='dropdown-content'>
-			    <li>Artist Name: Corinna Bailey Rae</li>
-			    <li>Venue: The Neighborhood Theater</li>
-			    <li>Date: 9/17/16 10:00 pm</li>
-			    <li>Time:  10:00 pm</li>
+			<ul id='deep-purple lighten-2 dropdown1' class='dropdown-content'>
+			    <li>Artist Name</li>
+			    <li>Venue</li>
+			    <li>Date</li>
+			    <li>Time</li>
 			</ul>
 		    
 		    <!-- 4 City -->
-			<a class='dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>4 City</a>
+			<a class='deep-purple lighten-2 dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>Fourth City</a>
 		  
-			<ul id='dropdown1' class='dropdown-content'>
+			<ul id='deep-purple lighten-2 dropdown1' class='dropdown-content'>
 			    <li>Artist Name</li>
 			    <li>Venue</li>
 			    <li>Date</li>
@@ -76,9 +80,9 @@
 			</ul>
 
 			<!-- 5 City -->
-			<a class='dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>End City</a>
+			<a class='deep-purple lighten-2 dropdown-button btn col s12' data-beloworigin="true" href='#' data-activates='dropdown1'>End City</a>
 		  
-			<ul id='dropdown1' class='dropdown-content'>
+			<ul id='deep-purple lighten-2 dropdown1' class='dropdown-content'>
 			    <li>Artist Name</li>
 			    <li>Venue</li>
 			    <li>Date</li>
@@ -89,7 +93,7 @@
       <!-- map Panel-->
         <div class="col s8">        
             <!-- map Box -->
-        	<div class="card-panel" id = "mapBox">
+        	<div class="deep-purple lighten-5 card-panel" id = "mapBox">
 			
 			<!-- end card panel div -->
         	</div>
@@ -103,6 +107,15 @@
 <!-- container div -->
 </div>
 
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modalContent">
+    <span class="close">x</span>
+    <p><br>Error 999:<br><br>Oops!<br><br>First stop and genre cannot be blank.<br><br>Please enter the the missing information.</p>
+  </div>
+
+</div>
 <!-- JS Script Links -->
 
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
